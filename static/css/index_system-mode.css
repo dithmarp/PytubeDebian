@@ -1,0 +1,151 @@
+/* Modo Según el Sistema */
+
+/* Si el sistema del usuario está en modo oscuro */
+@media (prefers-color-scheme: dark) {
+  body.system-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  .system-mode header {
+    background-color: #1f1f1f;
+    color: #ffffff;
+  }
+
+  .system-mode input[type="text"],
+  .system-mode select {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #444444;
+  }
+
+  .system-mode #video_url:focus,
+  .system-mode #get_info_button.focused-border {
+    border-color: #007bff;
+  }
+
+  .system-mode #get_info_button {
+    background-color: #444444;
+    color: #ffffff;
+    border-color: #444;
+  }
+
+  .system-mode #get_info_button:hover {
+    background-color: #666666;
+  }
+
+  .system-mode .modal-bg {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .system-mode #info_div {
+    background-color: #2b2b2b;
+    border-color: #ccc;
+    color: #ffffff;
+  }
+
+  .system-mode #download_button {
+    background-color: #0056b3;
+    color: #ffffff;
+  }
+
+  .system-mode #download_button:hover {
+    background-color: #00346d;
+  }
+
+  .system-mode .theme-selector .selected-option,
+  .system-mode .theme-selector .options {
+    background-color: #333333;
+    border-color: #444444;
+  }
+
+  .system-mode .theme-selector .option:hover {
+    background: rgb(70, 70, 70);
+  }
+
+  .system-mode .loader {
+    border-left: 4px solid #ffffff;
+  }
+
+  .system-mode h1,
+  .system-mode label,
+  .system-mode #published_date,
+  .system-mode #channel_name {
+    color: #ffffff;
+  }
+}
+
+/* Si el sistema del usuario está en modo claro */
+@media (prefers-color-scheme: light) {
+  body.system-mode {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .system-mode header {
+    background-color: #f9f9f9;
+    color: #333333;
+  }
+
+  .system-mode input[type="text"],
+  .system-mode select {
+    background-color: #f5f5f5;
+    color: #333333;
+    border-color: #ccc;
+  }
+
+  .system-mode #video_url:focus,
+  .system-mode #get_info_button.focused-border {
+    border-color: #007bff;
+  }
+
+  .system-mode #get_info_button {
+    background-color: #f0f0f0;
+    color: #333333;
+    border-color: #ccc;
+  }
+
+  .system-mode #get_info_button:hover {
+    background-color: #e0e0e0;
+  }
+
+  .system-mode .modal-bg {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .system-mode #info_div {
+    background-color: #ffffff;
+    border-color: #ccc;
+    color: #333333;
+  }
+
+  .system-mode #download_button {
+    background-color: #0056b3;
+    color: #ffffff;
+  }
+
+  .system-mode #download_button:hover {
+    background-color: #00346d;
+  }
+
+  .system-mode .theme-selector .selected-option,
+  .system-mode .theme-selector .options {
+    background-color: #f5f5f5;
+    border-color: #cccccc;
+  }
+
+  .system-mode .theme-selector .option:hover {
+    background: rgb(230, 230, 230);
+  }
+
+  .system-mode .loader {
+    border-left: 4px solid #000000;
+  }
+
+  .system-mode h1,
+  .system-mode label,
+  .system-mode #published_date,
+  .system-mode #channel_name {
+    color: #333333;
+  }
+}

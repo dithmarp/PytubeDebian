@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Python Downloader</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index_class.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index_id.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index_dark-mode.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index_light-mode.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index_system-mode.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index_info_div.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/responsive.css') }}">
+        <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+    </head>
+<body data-theme="light">
+    <header>
+        <h1 class="title_web">Extract Video Info & Download Video</h1>
+        <div id="themeSelector" class="theme-selector">
+            <div class="selected-option" data-value="light"><i class="fas fa-sun"></i>Modo Claro</div>
+            <div class="options">
+                <div class="option" data-value="light"><i class="fas fa-sun"></i>Modo Claro</div>
+                <div class="option" data-value="dark"><i class="fas fa-moon"></i>Modo Oscuro</div>
+                <div class="option" data-value="system"><i class="fas fa-cogs"></i>Según el Sistema</div>
+            </div>
+        </div>
+    </header>
+
+    <div id="container">
+        <form id="videoForm">
+            <label for="video_url">YouTube Video URL:</label>
+            <input type="text" id="video_url" name="video_url" placeholder="Enter YouTube URL">
+            <button type="button" id="get_info_button">Start</button>
+        </form>
+    </div>
+
+    <!-- <div id="streams_info">
+        <h2>Streams disponibles:</h2>
+        <div class="columns-container">
+            <div class="column">
+                <h3>Video:</h3>
+                <div id="video_streams"></div>
+            </div>
+            <div class="column">
+                <h3>Audio:</h3>
+                <div id="audio_streams"></div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="modal-bg" id="modalBg"></div>
+    <div id="info_div" class="info_div_container">
+        <h1 id="title"></h1>
+        <p id="URL"></p>
+        <div id="player-container">
+            <div id="player"></div>
+        </div>
+        <p id="published_date"></p>
+        <p id="channel_name"></p>
+        
+        <label for="video_formats">Video Formats:</label>
+        <select id="video_formats">
+            <option value="">--Select format--</option>
+            <!-- Los formatos de video se añadirán aquí -->
+        </select>
+        
+        <!-- Agregamos el div para mostrar las opciones de calidad -->
+        <div id="quality_selection" style="display:none;">
+            <label for="video_quality">Video Quality:</label>
+            <select id="video_quality">
+                <!-- La calidad de video se añadirá aquí -->
+            </select>
+            <label for="audio_quality">Audio Quality:</label>
+            <select id="audio_quality">
+                <!-- La calidad de audio se añadirá aquí -->
+            </select>
+        </div>     
+        
+        <button id="download_button" style="display:none;" type="submit" onclick="downloadVideo()">Download</button>
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('static/sw.js').then(function(registration) {
+                    // console.log('Service Worker registrado con éxito:', registration.scope);
+                }, function(err) {
+                    // console.log('Error al registrar el Service Worker:', err);
+                });
+            });
+        }
+    </script> 
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="{{ url_for('static', filename='javascript/events.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascript/dark-mode.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascript/system-mode.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascript/downloader.js') }}"></script>
+</body>
+</html>

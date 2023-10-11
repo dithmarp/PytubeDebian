@@ -1,0 +1,76 @@
+/* Modo Claro */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.light-mode header {
+  background-color: #f9f9f9;
+  color: #333333;
+}
+
+/* .light-mode #container {
+  background-color: #fafafa;
+} */
+
+.light-mode input[type="text"],
+.light-mode select {
+  background-color: #f5f5f5;
+  color: #333333;
+  border-color: #ccc;
+}
+
+.light-mode #video_url:focus,
+.light-mode #get_info_button.focused-border {
+  border-color: #007bff;
+}
+
+.light-mode #get_info_button {
+  background-color: #f0f0f0;
+  color: #333333;
+  border-color: #ccc;
+}
+
+.light-mode #get_info_button:hover {
+  background-color: #e0e0e0;
+}
+
+.light-mode .modal-bg {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.light-mode #info_div {
+  background-color: #ffffff;
+  border-color: #ccc;
+  color: #333333;
+}
+
+.light-mode #download_button {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+.light-mode #download_button:hover {
+  background-color: #00346d;
+}
+
+.light-mode .theme-selector .selected-option,
+.light-mode .theme-selector .options {
+  background-color: #f5f5f5;
+  border-color: #cccccc;
+}
+
+.light-mode .theme-selector .option:hover {
+  background: rgb(230, 230, 230);
+}
+
+.light-mode .loader {
+  border-left: 4px solid #000000;
+}
+
+.light-mode h1,
+.light-mode label,
+.light-mode #published_date,
+.light-mode #channel_name {
+  color: #333333;
+}

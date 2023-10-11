@@ -1,0 +1,86 @@
+/* Estilos para pantallas pequeñas (hasta 600px) */
+@media screen and (max-width: 600px) {
+    #container {
+        margin: 20px auto;
+    }
+
+    #videoForm {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        border-radius: 8px;
+    }
+}
+
+/* Estilos para pantallas medianas (601px a 800px) */
+@media screen and (min-width: 601px) and (max-width: 800px) {
+    #container {
+        max-width: 600px;
+    }
+}
+
+/* Estilos para pantallas grandes (801px a 1200px) */
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+    #container {
+        max-width: 800px;
+    }
+}
+
+/* Estilos para pantallas extra grandes (1201px a 1600px) */
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+    #container {
+        max-width: 1200px;
+    }
+}
+
+/* Estilos para pantallas Full HD (1920px x 1080px) */
+@media screen and (min-width: 1601px) and (max-width: 1920px) {
+    #container {
+        max-width: 1600px;
+    }
+}
+
+/* Estilos para pantallas HD (1366px x 768px) */
+@media screen and (min-width: 1201px) and (max-width: 1366px) {
+    #info_div {
+        overflow-y: auto;
+        max-height: 500px;
+    }
+
+    #player-container {
+        height: 300px;
+    }
+
+    #player {
+        width: 520px;
+        height: 300px;
+    }
+}
+
+/* Estilos para pantallas HD (1280px x 720px) */
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+    #container {
+        max-width: 992px;
+    }
+}
+
+/* Estilos para pantallas 2K (2560px x 1440px) */
+@media screen and (min-width: 1921px) and (max-width: 2560px) {
+    #container {
+        max-width: 1920px;
+    }
+}
+
+/* Estilos para pantallas 4K (3840px x 2160px) */
+@media screen and (min-width: 2561px) and (max-width: 3840px) {
+    #container {
+        max-width: 2560px;
+    }
+}

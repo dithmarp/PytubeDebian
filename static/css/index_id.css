@@ -1,0 +1,100 @@
+/* Estilos para el modo claro y oscuro */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  color:black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--background-color);
+  padding: 5px 20px 5px 20px;
+  z-index: 2;
+}
+
+label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  height: 23.5px;
+  padding: 8px;
+  font-size: 16px;
+  color: var(--text-color);
+  border: 1px solid #ccc;
+  border-right: none;
+  width: 400px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 1px solid #007bff;
+}
+
+h1 {
+  margin: 10px 0;
+}
+
+#container {
+  position: absolute; /* Utiliza absolute en lugar de fixed para que esté relativo al documento */
+  width: 700px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 20px;
+  top: 92px; /* Ajusta el valor para que el container esté justo debajo del header */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2; /* Asegura que el container esté detrás del header */
+}
+  
+#videoForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+#video_url {
+  border-right: none;
+  border-radius: 40px 0 0 40px;
+  background-color: var(--input-background);
+}
+
+#get_info_button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: var(--button-background);
+  border-radius: 0 40px 40px 0;
+  color: var(--button-text-color);
+  cursor: pointer;
+  height: 41.5px;
+  width: 72px;
+  transition: background-color 0.5s ease, color 0.25s ease;
+}
+
+#get_info_button.focused-border {
+  border: 1px solid #007bff;
+  
+}
